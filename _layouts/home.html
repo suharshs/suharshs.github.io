@@ -1,0 +1,36 @@
+---
+layout: default
+
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts  -%}
+      <li>
+<div style="display: flex; align-items: center;">
+  <div style="width: 200px; margin-right: 10px;">
+	  <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </div>
+    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
+      <div style="width: {{ post.yumminess | plus: post.quality | plus: post.value | plus: post.service | plus: post.ambiance }}%; height: 100%; background: linear-gradient(to right, white, red); border-radius: 5px;"></div>
+    </div>
+  </div>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>

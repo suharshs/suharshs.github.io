@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Casa Lupe"
+date:   2023-04-07 14:56:53 -0700
+categories: ["South Bay, Ca", "Mexican"]
+yumminess: 60
+quality: 12
+value: 8
+service: 10
+ambiance: 5
+---
+
+## What We Ordered
+* Vegetarian Chimichanga
+* Cheese and Veggie Enchiladas
+* Huevos Rancheros
+* Guacamole Tostada
+* Mexican Hot Chocolate
+
+## Our Review
+Casa Lupe is our go-to Mexican sit-down restaurant. Its cozy feel and friendly service are what bring us back.
+
+The staff has remained the same for the many years that we have come and seem to have a great relationship with all repeat diners.
+
+Food is solid – both salsas are fresh and have some kick, the beans are flavorful, and portions are quite generous.
+
+You can find better-tasting Mexican Food in the Bay Area, but on the whole, its hard to come by a better sit-down experience. Feels like family.
+ 
+Pro-tip: if you like quacamole, get the Guacamole Tostada. The tostada comes completely smothered in guacamole and is an avocado lover’s dream.
