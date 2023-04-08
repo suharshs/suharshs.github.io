@@ -2,7 +2,7 @@
 layout: post
 title:  "Cicero's Pizza"
 date:   2023-04-07 14:56:53 -0700
-categories: ["South Bay, Ca", "Pizza"]
+categories: ["Bay Area, Ca", "Pizza"]
 yumminess: 55
 quality: 12
 value: 7

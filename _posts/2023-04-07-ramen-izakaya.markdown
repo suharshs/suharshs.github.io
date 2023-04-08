@@ -2,7 +2,7 @@
 layout: post
 title:  "Ramen Izakaya Yu-gen"
 date:   2023-04-07 14:56:53 -0700
-categories: ["South Bay, Ca", "Ramen"]
+categories: ["Bay Area, Ca", "Ramen"]
 yumminess: 55
 quality: 12
 value: 7

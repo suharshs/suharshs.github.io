@@ -2,7 +2,7 @@
 layout: post
 title:  "Margarita's Taqueria"
 date:   2023-04-07 14:56:53 -0700
-categories: ["South Bay, Ca", "Mexican"]
+categories: ["Bay Area, Ca", "Mexican"]
 yumminess: 60
 quality: 14
 value: 10

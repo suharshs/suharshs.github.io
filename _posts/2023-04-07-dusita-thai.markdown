@@ -2,7 +2,7 @@
 layout: post
 title:  "Dusita Thai"
 date:   2023-04-07 14:56:53 -0700
-categories: ["South Bay, Ca", "Thai"]
+categories: ["Bay Area, Ca", "Thai"]
 yumminess: 60
 quality: 14
 value: 8
