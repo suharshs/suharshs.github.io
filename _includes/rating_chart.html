@@ -1,38 +1,124 @@
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; align-items: center;">
-    <div style="width: 150px; margin-right: 10px;">Total:</div>
-    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
-      <div style="width: {{ page.yumminess | plus: page.quality | plus: page.value | plus: page.service | plus: page.ambiance }}%; height: 100%; background-color: #000; border-radius: 5px;"></div>
+<div class="rating-chart">
+  <h3 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 1.5rem; font-weight: 600;">Our Ratings</h3>
+
+  <div class="rating-item rating-total">
+    <div class="rating-label">Overall</div>
+    <div class="rating-bar-container">
+      <div class="rating-bar" style="width: {{ page.yumminess | plus: page.quality | plus: page.value | plus: page.service | plus: page.ambiance }}%; background: linear-gradient(90deg, #4ade80, #22c55e, #ff6b6b);"></div>
     </div>
+    <div class="rating-value">{{ page.yumminess | plus: page.quality | plus: page.value | plus: page.service | plus: page.ambiance }}/100</div>
   </div>
-  <div style="display: flex; align-items: center;">
-    <div style="width: 150px; margin-right: 10px;">Yumminess:</div>
-    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
-      <div style="width: {{ page.yumminess | divided_by: 0.6 }}%; height: 100%; background-color: #e57373; border-radius: 5px;"></div>
+
+  <div class="rating-item">
+    <div class="rating-label">Yumminess</div>
+    <div class="rating-bar-container">
+      <div class="rating-bar" style="width: {{ page.yumminess | divided_by: 0.6 }}%; background-color: #ef4444;"></div>
     </div>
+    <div class="rating-value">{{ page.yumminess }}/60</div>
   </div>
-  <div style="display: flex; align-items: center;">
-    <div style="width: 150px; margin-right: 10px;">Quality:</div>
-    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
-      <div style="width: {{ page.quality | divided_by: 0.15 }}%; height: 100%; background-color: #ffb74d; border-radius: 5px"></div>
+
+  <div class="rating-item">
+    <div class="rating-label">Quality</div>
+    <div class="rating-bar-container">
+      <div class="rating-bar" style="width: {{ page.quality | divided_by: 0.15 }}%; background-color: #f97316;"></div>
     </div>
+    <div class="rating-value">{{ page.quality }}/15</div>
   </div>
-  <div style="display: flex; align-items: center;">
-    <div style="width: 150px; margin-right: 10px;">Service:</div>
-    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
-      <div style="width: {{ page.service | divided_by: 0.1 }}%; height: 100%; background-color: #fff176; border-radius: 5px;"></div>
+
+  <div class="rating-item">
+    <div class="rating-label">Service</div>
+    <div class="rating-bar-container">
+      <div class="rating-bar" style="width: {{ page.service | divided_by: 0.1 }}%; background-color: #eab308;"></div>
     </div>
+    <div class="rating-value">{{ page.service }}/10</div>
   </div>
-  <div style="display: flex; align-items: center;">
-    <div style="width: 150px; margin-right: 10px;">Value:</div>
-    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
-      <div style="width: {{ page.value | divided_by: 0.1 }}%; height: 100%; background-color: #81c784; border-radius: 5px;"></div>
+
+  <div class="rating-item">
+    <div class="rating-label">Value</div>
+    <div class="rating-bar-container">
+      <div class="rating-bar" style="width: {{ page.value | divided_by: 0.1 }}%; background-color: #22c55e;"></div>
     </div>
+    <div class="rating-value">{{ page.value }}/10</div>
   </div>
-  <div style="display: flex; align-items: center;">
-    <div style="width: 150px; margin-right: 10px;">Ambiance:</div>
-    <div style="width: 200px; height: 10px; border-radius: 5px; overflow: hidden; border: 1px solid #000">
-      <div style="width: {{ page.ambiance | divided_by: 0.05 }}%; height: 100%; background-color: #64b5f6; border-radius: 5px;"></div>
+
+  <div class="rating-item">
+    <div class="rating-label">Ambiance</div>
+    <div class="rating-bar-container">
+      <div class="rating-bar" style="width: {{ page.ambiance | divided_by: 0.05 }}%; background-color: #3b82f6;"></div>
     </div>
+    <div class="rating-value">{{ page.ambiance }}/5</div>
   </div>
 </div>
+
+<style>
+.rating-chart {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+}
+
+.rating-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.rating-item:last-child {
+  margin-bottom: 0;
+}
+
+.rating-total {
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.rating-label {
+  min-width: 100px;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+.rating-bar-container {
+  flex: 1;
+  height: 14px;
+  background: #f0f0f0;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
+.rating-bar {
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.5s ease;
+}
+
+.rating-value {
+  min-width: 60px;
+  text-align: right;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .rating-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .rating-bar-container {
+    width: 100%;
+  }
+
+  .rating-value {
+    align-self: flex-end;
+  }
+}
+</style>
